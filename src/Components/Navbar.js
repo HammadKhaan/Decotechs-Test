@@ -26,6 +26,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
+  const Main = () => {
+      return (
+        <Typography variant="p" className={classes.title}>
+                Lorem
+          </Typography>
+      );
+  }
 
   return (
     <div className={classes.root} style={{paddingTop:"0px",}}>            
@@ -34,26 +41,13 @@ export default function Navbar() {
             <Grid container>
            <Grid item lg={3}> <img src={Logo} alt="" style={{height:"50px", width:"170px", }} />   </Grid>
 
-           {/* <Grid item lg={3}> </Grid> */}
-           {/* <Grid item lg={3}> </Grid> */}
 
            
            <Grid item lg={9}>
-          <Typography variant="p" className={classes.title}>
-                Lorem
-          </Typography>
-          <Typography variant="p" className={classes.title}>
-                Lorem
-          </Typography>
-          <Typography variant="p" className={classes.title}>
-                Lorem
-          </Typography>
-          <Typography variant="p" className={classes.title}>
-                Lorem
-          </Typography>
-          <Typography variant="p" className={classes.title}>
-                Lorem
-          </Typography>
+          
+          {[0,0,0,0].map(i=> <Main/>)}
+          
+        
           <Button color="inherit" variant="contained" style={{backgroundColor: "#009933"}} className={classes.title}>Lorem Ipsum</Button>
 
           </Grid>

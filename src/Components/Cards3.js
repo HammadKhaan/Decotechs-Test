@@ -10,7 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import { Grid } from '@material-ui/core';
 import Dummy from '../Images/dummyheader.png';
-import Cards1 from '../Components/Cards1';
+import {
+  CCard
+} from './Cards1' 
 
 const useStyles = makeStyles({
   root: {
@@ -48,11 +50,11 @@ export default function Cards3() {
         </Grid>   
         </Grid>
     
-    {/* <Grid container style={{marginTop:"80px"}}>
-          
-    </Grid> */}
-    <Cards1 />
+    <Grid container style={{marginTop:"80px"}}>
+           {[0,0,0,0].map(i=><CCard  />)}
 
+    </Grid>
+   
     </div>
   );
 }
