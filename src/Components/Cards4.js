@@ -35,21 +35,9 @@ const useStyles = makeStyles({
 
 export default function Cards4() {
   const classes = useStyles();
-
-  return (
-
-
-    <div style={{marginTop:"140px"}}>
-        <Grid container >
-        <Grid item lg={12} style ={{color:"white",textAlign:"center"}}>
-        <Typography variant="subtitle1" color="initial" style={{color:"#009933"}}>Lorem</Typography>
-        <Divider orientation="vertical" flexItem style={{backgroundColor:"#009933",height:"5px",width:"15%",marginLeft:"580px",marginTop:"10px",marginBottom:"10px"}}/>
-        <Typography variant="h5" color="initial">TOP RATED COURSES </Typography>
-        </Grid>   
-        </Grid>
-    
-    <Grid container style={{marginTop:"80px"}}>
-    <Grid item lg={3}> 
+  const CCard4 = () => {
+    return (
+      <Grid item lg={3}> 
     <Card className={classes.root}>
         
       <CardActionArea>
@@ -77,104 +65,26 @@ export default function Cards4() {
       </CardActions>
     </Card>
     </Grid>
+    );
+  }
 
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions >
-        <Button size="small" color="primary" className={classes.text}>
-          LOGIN
-        </Button>
-        <Button size="small" color="primary" className={classes.text}>
-          REGISTER
-        </Button>
-      </CardActions>
-    </Card>
-    </Grid>
+  return (
 
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions >
-        <Button size="small" color="primary" className={classes.text}>
-          LOGIN
-        </Button>
-        <Button size="small" color="primary" className={classes.text}>
-          REGISTER
-        </Button>
-      </CardActions>
-    </Card>
-    </Grid>
 
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions >
-        <Button size="small" color="primary" className={classes.text}>
-          LOGIN
-        </Button>
-        <Button size="small" color="primary" className={classes.text}>
-          REGISTER
-        </Button>
-      </CardActions>
-    </Card>
-    </Grid>
+    <div style={{marginTop:"140px"}}>
+        <Grid container >
+        <Grid item lg={12} style ={{color:"white",textAlign:"center"}}>
+        <Typography variant="subtitle1" color="initial" style={{color:"#009933"}}>Lorem</Typography>
+        <Divider orientation="vertical" flexItem style={{backgroundColor:"#009933",height:"5px",width:"15%",marginLeft:"580px",marginTop:"10px",marginBottom:"10px"}}/>
+        <Typography variant="h5" color="initial">TOP RATED COURSES </Typography>
+        </Grid>   
+        </Grid>
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <Grid container style={{marginTop:"80px"}}>
+ 
+    {[0,0,0,0].map(i=><CCard4  />)}
+   
+  
     </Grid>
     </div>
   );
