@@ -9,8 +9,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import { Grid } from '@material-ui/core';
-import Dummy from '../Images/dummyheader.png'
-
+import Dummy from '../Images/dummyheader.png';
+import Cards1 from '../Components/Cards1';
 
 const useStyles = makeStyles({
   root: {
@@ -48,106 +48,11 @@ export default function Cards3() {
         </Grid>   
         </Grid>
     
-    <Grid container style={{marginTop:"80px"}}>
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur 
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.text}>
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </Grid>
+    {/* <Grid container style={{marginTop:"80px"}}>
+          
+    </Grid> */}
+    <Cards1 />
 
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </Grid>
-
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </Grid>
-
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </Grid>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </Grid>
     </div>
   );
 }

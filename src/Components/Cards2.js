@@ -35,6 +35,39 @@ const useStyles = makeStyles({
 
 export default function Cards2() {
   const classes = useStyles();
+  const CCard2 = () => {
+    return (
+      <Grid item lg={3}> 
+      <Card className={classes.root}>
+          
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={Dummy}
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+            Lorem ipsum dolor sit amet consectetur 
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.text}>
+            Lorem ipsum dolor sit
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions >
+          <Button size="small" color="primary" className={classes.text}>
+            LOGIN
+          </Button>
+          <Button size="small" color="primary" className={classes.text}>
+            REGISTER
+          </Button>
+        </CardActions>
+      </Card>
+      </Grid>
+    );
+  }
+  
 
   return (
 
@@ -49,131 +82,9 @@ export default function Cards2() {
         </Grid>
     
     <Grid container style={{marginTop:"80px"}}>
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur 
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.text}>
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions >
-        <Button size="small" color="primary" className={classes.text}>
-          LOGIN
-        </Button>
-        <Button size="small" color="primary" className={classes.text}>
-          REGISTER
-        </Button>
-      </CardActions>
-    </Card>
-    </Grid>
 
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions >
-        <Button size="small" color="primary" className={classes.text}>
-          LOGIN
-        </Button>
-        <Button size="small" color="primary" className={classes.text}>
-          REGISTER
-        </Button>
-      </CardActions>
-    </Card>
-    </Grid>
+    {[0,0,0,0].map(i=><CCard2  />)}
 
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions >
-        <Button size="small" color="primary" className={classes.text}>
-          LOGIN
-        </Button>
-        <Button size="small" color="primary" className={classes.text}>
-          REGISTER
-        </Button>
-      </CardActions>
-    </Card>
-    </Grid>
-
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions >
-        <Button size="small" color="primary" className={classes.text}>
-          LOGIN
-        </Button>
-        <Button size="small" color="primary" className={classes.text}>
-          REGISTER
-        </Button>
-      </CardActions>
-    </Card>
-    </Grid>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     </Grid>
     </div>

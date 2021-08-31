@@ -48,6 +48,30 @@ const useStyles = makeStyles((theme) => ({
 export default function Explore() {
   const classes = useStyles();
   const theme = useTheme();
+  const SCard = () => {
+    return (
+      <Grid item lg={3} > 
+      <Card className={classes.root}>
+      <CardMedia
+          className={classes.cover}
+          image={Dummy}
+          title=""
+        />
+        
+        <div className={classes.details}>
+          <CardContent className={classes.content}>
+            <Typography component="h6" variant="h6">
+              LOREM
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary" style={{color:"white"}}>
+              Lorem Ipsum
+            </Typography>
+          </CardContent>        
+        </div>
+      </Card>
+      </Grid>
+    );
+  }
 
   return (
     <div style={{marginTop:"140px"}}>
@@ -62,98 +86,9 @@ export default function Explore() {
 
     
     <Grid container style={{marginTop:"40px",marginLeft:"0px"}}>
-    
-    <Grid item lg={3} > 
-    <Card className={classes.root}>
-    <CardMedia
-        className={classes.cover}
-        image={Dummy}
-        title=""
-      />
-      
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component="h6" variant="h6">
-            LOREM
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary" style={{color:"white"}}>
-            Lorem Ipsum
-          </Typography>
-        </CardContent>        
-      </div>
-    </Card>
-    </Grid>
 
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-    <CardMedia
-        className={classes.cover}
-        image={Dummy}
-        title=""
-      />
-      
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component="h6" variant="h6">
-            LOREM
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary" style={{color:"white"}}>
-            Lorem Ipsum
-          </Typography>
-        </CardContent>        
-      </div>
-    </Card>
-    </Grid>
+    {[0,0,0,0].map(i=><SCard  />)}
 
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-    <CardMedia
-        className={classes.cover}
-        image={Dummy}
-        title=""
-      />
-      
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component="h6" variant="h6">
-            LOREM
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary" style={{color:"white"}}>
-            Lorem Ipsum
-          </Typography>
-        </CardContent>        
-      </div>
-    </Card>
-    </Grid>
-
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-    <CardMedia
-        className={classes.cover}
-        image={Dummy}
-        title=""
-      />
-      
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component="h6" variant="h6">
-            LOREM
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary" style={{color:"white"}}>
-            Lorem Ipsum
-          </Typography>
-        </CardContent>        
-      </div>
-    </Card>
-    </Grid>
-    
-    
-    
-    
-    
-    
-    
-    
     </Grid>
     
     </div>

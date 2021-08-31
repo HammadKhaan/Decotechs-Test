@@ -35,6 +35,33 @@ const useStyles = makeStyles({
 
 export default function Cards1() {
   const classes = useStyles();
+  const CCard = () => {
+    return (
+      <Grid item lg={3}> 
+    
+      <Card className={classes.root}>
+          
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={Dummy}
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+            Lorem ipsum dolor sit amet consectetur 
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.text}>
+            Lorem ipsum dolor sit
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        
+      </Card>
+     
+      </Grid>
+    );
+  }
 
   return (
 
@@ -49,104 +76,10 @@ export default function Cards1() {
         </Grid>
     
     <Grid container style={{marginTop:"80px"}}>
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur 
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.text}>
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </Grid>
-
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </Grid>
-
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </Grid>
-
-    <Grid item lg={3}> 
-    <Card className={classes.root}>
-        
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={Dummy}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          Lorem ipsum dolor sit amet consectetur
-          </Typography>
-          <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-          Lorem ipsum dolor sit
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      
-    </Card>
-    </Grid>
     
+    {[0,0,0,0].map(i=><CCard  />)}
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     </Grid>
     </div>
   );
